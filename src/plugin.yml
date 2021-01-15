@@ -1,0 +1,7 @@
+main: net.boybacks.deathban.Main
+name: DeathBan
+version: 1.1
+author: BoyBACKS
+api-version: 1.16
+depend:
+  - Essentials

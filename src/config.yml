@@ -1,0 +1,6 @@
+# Tu wpisz czas!
+time: 15
+# Tu wpisz jednostkę czasu! (y, w, d, h, m, s itp.)
+mark: "m"
+# Tu wpisz wiadomość banu!
+reason: "Zginąłeś! Czekaj aż się odrodzisz!"

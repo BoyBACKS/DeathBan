@@ -1,6 +1,10 @@
 main: net.boybacks.deathban.Main
 name: DeathBan
-version: 1.2
+
+#Dodano Config.yml / v1.4 dodać własne bany!
+version: 1.3
+
+description: Prosty plugin na banowanie graczy za zgnięcie
 author: BoyBACKS
 api-version: 1.16
 depend:

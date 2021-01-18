@@ -11,6 +11,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin implements Listener {
 
+    //Do usunięcia
+    int min = this.getConfig().getInt("min");
+    int max = this.getConfig().getInt("max");
+
+
     @Override
     public void onEnable(){
         getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "\n\n[DeathBan]" + ChatColor.GREEN + " Plugin DeathBan jest aktywny\n\n");
@@ -22,8 +27,11 @@ public class Main extends JavaPlugin implements Listener {
     public void onDisable(){
         getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "\n\n[DeathBan]" + ChatColor.RED + " Plugin DeathBan jest nieaktywny\n\n");
     }
+    //to do data.yml
+//    int deathcount = ;
 
     //to do config.yml
+    Object random = this.getConfig().getString("random");
     int time = this.getConfig().getInt("time");
     String mark = this.getConfig().getString("mark");
     String reason = this.getConfig().getString("reason");
@@ -35,8 +43,15 @@ public class Main extends JavaPlugin implements Listener {
     public void Death(PlayerDeathEvent e) {
         Player player = (Player) e.getEntity();
         if(e.getEntity() instanceof Player) {
-            if (!(player.hasPermission("DeathBan.Death"))){
-                Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), cmd[0] + player.getName() + cmd[1] + time + mark + cmd[1] + reason);
+            if (!(player.hasPermission("DeathBan.Death"))) {
+                if (random == "false") {
+                    Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), cmd[0] + player.getName() + cmd[1] + time + mark + cmd[1] + reason);
+                }
+                else if (random == "true") {
+                    int RandomNo = (int)(Math.random()*(max-min+1)+min);
+                    int RandomTime =  time * RandomNo;
+                    Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), cmd[0] + player.getName() + cmd[1] + RandomTime + mark + cmd[1] + reason);
+                }
             }
         }
     }

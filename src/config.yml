@@ -1,3 +1,18 @@
+##########################
+#                        #
+#        DeathBan        #
+#                        #
+##########################
+#Mnożnik zgonów przez czas ustawiony niżej!
+random: false
+#Jeżeli zaznaczyłeś randomowy czas banu to wpisz poniżej minimalną i maksymalną
+# (Równanie na randomowy czas to: time * RandomowaLiczba)
+#minilalna wartość losowania liczny
+min: 1
+#maksymalna wartość losowania liczby
+max: 10
+
+
 # Tu wpisz czas!
 time: 15
 # Tu wpisz jednostkę czasu! (y, w, d, h, m, s itp.)

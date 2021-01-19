@@ -3,6 +3,12 @@
   Jest to prosty plugin który daje bana za śmierć na określony czas
   
 ## Co dodaliśmy nowego?
+V1.3.3
+  * Naprawiliśmy problem z klonujacymi się itemami
+
+V1.3.2
+  * Dodaliśmy losowy czas Bana do ustawienia w **Config.yml**
+
 V1.3
   * Dodaliśmy **config.yml**
   * Zoptymalizowaliśmy kod
@@ -14,6 +20,8 @@ V1.1
   * Napisaliśmy w działający kod
 
 ## Co mamy dodać?
-  Aktualnie kożystamy z bana z pluginu [Essentials](#https://www.spigotmc.org/resources/essentialsx.9089/) (/tempban), 
+  * Aktualnie kożystamy z bana z pluginu [Essentials](#https://www.spigotmc.org/resources/essentialsx.9089/) (/tempban), 
   zamierzamy dodać własnego bana który jest napisany w kodzie, chcemy dodać specjalną funkcję która będzie pozwalać na mnożenie ilości śmierci przez czas 
   (**Ilość śmierci** * **Przykładowy czas w ustawiony w config.yml** = **Czas bana**)
+    
+  * Dodać licznik śmierci w pliku **data.yml**

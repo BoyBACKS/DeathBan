@@ -8,13 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-
-public class Main extends JavaPlugin implements Listener {
-
-    //Do usunięcia
-    int min = this.getConfig().getInt("min");
-    int max = this.getConfig().getInt("max");
-
+public class Main extends JavaPlugin implements Listener{
 
     @Override
     public void onEnable(){
@@ -26,28 +20,28 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onDisable(){
         getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "\n\n[DeathBan]" + ChatColor.RED + " Plugin DeathBan jest nieaktywny\n\n");
+        this.saveDefaultConfig();
     }
-    //to do data.yml
-//    int deathcount = ;
 
-    //to do config.yml
-    Object random = this.getConfig().getString("random");
+    int min = this.getConfig().getInt("min");
+    int max = this.getConfig().getInt("max");
     int time = this.getConfig().getInt("time");
+    Object random = this.getConfig().getString("random");
     String mark = this.getConfig().getString("mark");
     String reason = this.getConfig().getString("reason");
 
-    //to zostawić nie tykać!
     String[] cmd = {"tempban ", " "};
 
     @EventHandler
-    public void Death(PlayerDeathEvent e) {
+    public void onDeath(PlayerDeathEvent e) {
         Player player = (Player) e.getEntity();
+        e.getDrops().clear();
         if(e.getEntity() instanceof Player) {
             if (!(player.hasPermission("DeathBan.Death"))) {
                 if (random == "false") {
                     Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), cmd[0] + player.getName() + cmd[1] + time + mark + cmd[1] + reason);
                 }
-                else if (random == "true") {
+                else {
                     int RandomNo = (int)(Math.random()*(max-min+1)+min);
                     int RandomTime =  time * RandomNo;
                     Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), cmd[0] + player.getName() + cmd[1] + RandomTime + mark + cmd[1] + reason);

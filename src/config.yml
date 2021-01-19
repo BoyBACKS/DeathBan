@@ -3,19 +3,27 @@
 #        DeathBan        #
 #                        #
 ##########################
-#Mnożnik zgonów przez czas ustawiony niżej!
+
+# Zapisywanie itemów (Funkcja chwilowo niedostępna)
+#keepinventory: false
+
+# Mnożnik zgonów przez czas ustawiony niżej!
 random: false
-#Jeżeli zaznaczyłeś randomowy czas banu to wpisz poniżej minimalną i maksymalną
+
+# Jeżeli zaznaczyłeś randomowy czas banu to wpisz poniżej minimalną i maksymalną
 # (Równanie na randomowy czas to: time * RandomowaLiczba)
-#minilalna wartość losowania liczny
+# minilalna wartość losowania liczny
 min: 1
-#maksymalna wartość losowania liczby
+
+# maksymalna wartość losowania liczby
 max: 10
 
 
-# Tu wpisz czas!
+# Tu wpisz czas bana
 time: 15
-# Tu wpisz jednostkę czasu! (y, w, d, h, m, s itp.)
+
+# Tu wpisz jednostkę czasu (y, w, d, h, m, s itp.)
 mark: "m"
-# Tu wpisz wiadomość banu!
+
+# Tu wpisz powód bana
 reason: "Zginąłeś! Czekaj aż się odrodzisz!"

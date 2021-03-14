@@ -6,6 +6,7 @@
 V1.4.2
   * Zoptymalizawaliśmy kod 
   * Dodaliśmy wiadomość która pokazuje się dla graczy którzy posiadają permisje **deathban.bypass**
+  * Dodaliśmy licznik śmierci w **playerdata.yml**
 
 V1.4.1
   * Postanowiliśmy usunąć narzuconą komendę przez plugin, teraz można używać własnych 
@@ -32,4 +33,4 @@ V1.1
   zamierzamy dodać własnego bana który jest napisany w kodzie, chcemy dodać specjalną funkcję która będzie pozwalać na mnożenie ilości śmierci przez czas 
   (**Ilość śmierci** * **Przykładowy czas w ustawiony w config.yml** = **Czas bana**)~~
     
-  * Dodać licznik śmierci w pliku **data.yml**
+  * ~~Dodać licznik śmierci w pliku **data.yml**~~

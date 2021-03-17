@@ -13,8 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.util.UUID;
-
-public class Main extends JavaPlugin implements Listener {
+public class DeathBan extends JavaPlugin implements Listener{
 
     @Override
     public void onEnable(){
@@ -89,5 +88,4 @@ public class Main extends JavaPlugin implements Listener {
         }
         YamlConfiguration.loadConfiguration(this.newOptions);
     }
-
 }

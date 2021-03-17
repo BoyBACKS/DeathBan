@@ -3,6 +3,9 @@
   Jest to prosty plugin który wykonuje jakąś akcje po śmierci
   
 ## Co dodaliśmy nowego?
+V1.5
+  * Dodaliśmy wsparcie dla wersji 1.12+
+
 V1.4.2
   * Zoptymalizawaliśmy kod 
   * Dodaliśmy wiadomość która pokazuje się dla graczy którzy posiadają permisje **deathban.bypass**
@@ -29,6 +32,8 @@ V1.1
   * Napisaliśmy w działający kod
 
 ## Co mamy dodać?
+
+  * Zamierzamy dodać wsparcie dla wersji 1.8.x - 1.9.x
   * ~~Aktualnie kożystamy z bana z pluginu [Essentials](#https://www.spigotmc.org/resources/essentialsx.9089/) (/tempban), 
   zamierzamy dodać własnego bana który jest napisany w kodzie, chcemy dodać specjalną funkcję która będzie pozwalać na mnożenie ilości śmierci przez czas 
   (**Ilość śmierci** * **Przykładowy czas w ustawiony w config.yml** = **Czas bana**)~~

@@ -1,6 +1,4 @@
-main: net.boybacks.deathban.Main
+main: net.boybacks.deathban.DeathBan
 name: DeathBan
-version: 1.4.1
-description: Prosty plugin na banowanie graczy za zgnięcie
+version: 1.5
 author: BoyBACKS
-api-version: 1.16

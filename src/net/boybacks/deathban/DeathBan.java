@@ -10,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitScheduler;
 
 import java.io.File;
 import java.util.UUID;
@@ -17,14 +18,14 @@ public class DeathBan extends JavaPlugin implements Listener{
 
     @Override
     public void onEnable(){
-        getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "\n\n[DeathBan]" + ChatColor.GREEN + " Plugin DeathBan jest aktywny\n\n");
+        getServer().getConsoleSender().sendMessage(fix("\n\n &7| &6Death&cBan &7| &aPlugin is on\n\n"));
         getServer().getPluginManager().registerEvents(this, this);
         config();
     }
 
     @Override
     public void onDisable(){
-        getServer().getConsoleSender().sendMessage(ChatColor.AQUA + "\n\n[DeathBan]" + ChatColor.RED + " Plugin DeathBan jest nieaktywny\n\n");
+        getServer().getConsoleSender().sendMessage(fix("\n\n &7| &6Death&cBan &7| &aPlugin is &coff\n\n"));
         this.saveDefaultConfig();
     }
 
@@ -38,18 +39,19 @@ public class DeathBan extends JavaPlugin implements Listener{
     public void onDeath(PlayerDeathEvent e) {
         Player player = (Player) e.getEntity();
         UUID uuid = player.getUniqueId();
-        int death = this.s.getInt(uuid + ".deathcout");
-        if(e.getEntity() instanceof Player) {
-            if (!(player.hasPermission("deathban.bypass"))) {
-                Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(),
-                        this.getConfig().getString("command").replace("{PLAYER}", player.getName()));
-            }
-            else if (player.hasPermission("deathban.bypass")){
-                player.sendMessage(ChatColor.GREEN + this.getConfig().getString("message"));
-            }
-            this.s.set(uuid + ".deathcout", death + 1);
-            this.save();
+        int death = this.s.getInt(uuid + ".deathcount");
+        BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
+        if (!(player.hasPermission("deathban.bypass"))) {
+            scheduler.scheduleSyncDelayedTask(this, new Runnable() {
+                @Override
+                public void run() {
+                    Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(),
+                            getConfig().getString(fix("command")).replace("{PLAYER}", player.getName())); }}, 5L);
+        } else if (player.hasPermission("deathban.bypass")) {
+            player.sendMessage(fix(this.getConfig().getString("message")));
         }
+        this.s.set(uuid + ".deathcount", death + 1);
+        this.save();
     }
 
     @EventHandler
@@ -87,5 +89,9 @@ public class DeathBan extends JavaPlugin implements Listener{
             e.printStackTrace();
         }
         YamlConfiguration.loadConfiguration(this.newOptions);
+    }
+
+    public static String fix(String msg) {
+        return ChatColor.translateAlternateColorCodes('&', msg);
     }
 }

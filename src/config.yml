@@ -1,21 +1,20 @@
 ##########################
-#                        #
-#        DeathBan        #
-#                        #
+#        DeathBan        #ˑ
+#  created by BoyBACKS   #ˑ
 ##########################
 
-# This plugin is sooo easy to use!
-# You need only paste your command below!
+# This plugin is sooo easy to use!ˑ
+# You need only paste your command below!ˑ
 
-# Yeah thats right
-# paste command down below
+# Yeah thats rightˑ
+# paste command down belowˑ
 
-# ↓ Here paste it! ↓
+# ↓ Here paste it! ↓ˑ
 
-command: "ban {PLAYER}" # ← Soo replace it!
+command: "ban {PLAYER}" # ← Soo replace it!ˑ
 
-# ↑ JUST PASTE IT! ↑
+# ↑ JUST PASTE IT! ↑ˑ
 
-message: "WoW! you survive this :O"
+message: "WoW! You survived this :O"
 
-# If you want bypass that command you need premission: deathban.bypass
+# If you want bypass that command you need premission: deathban.bypassˑ

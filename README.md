@@ -1,56 +1,51 @@
 # DeathBan
 
-  Jest to prosty plugin który wykonuje jakąś komende po śmierci
+  Simple plugin that run custom command after player die, you can download plugin [here](#https://www.spigotmc.org/resources/deathban.91723/)
   
-# Permisje
+# Permissions
   `deathban.bypass` - permisja dająca ochronę przed działaniem komendy po śmierci
-## Co dodaliśmy nowego?
+  
+## What have we added new?
 V1.5.3
-  * Dodaliśmy fukcje 'Time' w pliku **config.yml**, funkcja ta 
-    pozwala na ustalenie własnego czasu wykonania komendy po śmierci
+  * We added the 'Time' function in the **config.yml** file, this function allows you to set your own     command execution time after death
 
 V1.5.2
-  * Poprawiliśmy błędy w plugine
-  * Naprawiliśmy problem z klonujacymi się itemami
-  * Dokonaliśmy kolejnej optymalizacji kodu
-  * Usunęliśmy wsparcie dla wersji 1.12.x (Aktualne wsparcie dla wersji 1.13+)
-  * Dodaliśmy wsparcie dla **ColorCodes** (&)
+  * We fixed bugs in the plugin
+  * We fixed the problem with clone items
+  * We have made another code optimization
+  * Removed support for version 1.12.x (Current support for version 1.13+)
+  * We added support for **ColorCodes** (&)
 
 V1.5
-  * ~~Dodaliśmy wsparcie dla wersji 1.12+~~
+  * ~~We added support for version 1.12 +~~
 
 V1.4.2
-  * Zoptymalizawaliśmy kod 
-  * Dodaliśmy wiadomość która pokazuje się dla graczy którzy posiadają permisje **deathban.bypass**
-  * Dodaliśmy licznik śmierci w **playerdata.yml**
+  * We optimized the code 
+  * We added a message that shows for players who have the **deathban.bypass** permissions 
+  * We added the death counter in **playerdata.yml**
 
 V1.4.1
-  * Postanowiliśmy usunąć narzuconą komendę przez plugin, teraz można używać własnych 
-    komend
+  * We decided to remove the command imposed by the plugin, now you can use your own commands
 
 V1.3.3
-  * ~~Naprawiliśmy problem z klonujacymi się itemami~~ - problem ten pojawiał się tylko gdy na serwerze zostało ustawione **KeepInventory**
+  * ~~We fixed the problem with clone items~~ - this problem only appeared when **KeepInventory** was set on the server
 
 V1.3.2
-  * ~~Dodaliśmy losowy czas Bana do ustawienia w **Config.yml**~~ - plugin już nie korzysta z tej opcji pojawić się ona może w przyszłości
+  * ~~We added a random Ban time to the setting in **Config.yml**~~ - the plugin no longer uses this option, it may appear in the future
 
 V1.3
-  * Dodaliśmy **config.yml**
-  * Zoptymalizowaliśmy kod
+  * We added **config.yml**
+  * We optimized the code
 
 V1.2
-  * ~~Dodaliśmy osobne zmienne (Czasu, Jednostki czasu, Powód Bana)~~ - plugin już nie korzysta z tej opcji pojawić się ona może w przyszłości
+  * ~~We added separate variables (Time, Time units, Ban Reason)~~ - the plugin doesn't use this option anymore, it may appear in the future
   
 V1.1
-  * Napisaliśmy w działający kod
+  * We have written in working code
 
-## Co mamy dodać?
+## What are we going to add?
 
-  * Możliwość wyłączenia działania pluginu
-  * Wsparcie dla MySQL
-  * Gui w którym można zarządzać całym pluginem
-  * Zamierzamy dodać wsparcie dla wersji 1.8.x - 1.12.x
-  * ~~Aktualnie korzystamy z bana z pluginu [Essentials](#https://www.spigotmc.org/resources/essentialsx.9089/) (/tempban), 
-  zamierzamy dodać własnego bana który jest napisany w kodzie, chcemy dodać specjalną funkcję która będzie pozwalać na mnożenie ilości śmierci przez czas 
-  (**Ilość śmierci** * **Przykładowy czas w ustawiony w config.yml** = **Czas bana**)~~
-  * ~~Dodać licznik śmierci w pliku **data.yml**~~
+  * Ability to disable plugin 
+  * MySQL support
+  * Gui where you can manage the entire plugin
+  * We are going to add support for 1.8.x - 1.12.x

@@ -40,13 +40,14 @@ public class DeathBan extends JavaPlugin implements Listener{
         Player player = (Player) e.getEntity();
         UUID uuid = player.getUniqueId();
         int death = this.s.getInt(uuid + ".deathcount");
+        int time = this.getConfig().getInt("time");
         BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
         if (!(player.hasPermission("deathban.bypass"))) {
             scheduler.scheduleSyncDelayedTask(this, new Runnable() {
                 @Override
                 public void run() {
                     Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(),
-                            getConfig().getString(fix("command")).replace("{PLAYER}", player.getName())); }}, 5L);
+                            getConfig().getString(fix("command")).replace("{PLAYER}", player.getName())); }}, time);
         } else if (player.hasPermission("deathban.bypass")) {
             player.sendMessage(fix(this.getConfig().getString("message")));
         }

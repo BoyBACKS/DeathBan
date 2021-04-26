@@ -15,6 +15,10 @@ command: "ban {PLAYER}" # ← Soo replace it!ˑ
 
 # ↑ JUST PASTE IT! ↑ˑ
 
+# Time counted in 'ticks' to execute the command (20 ticks = 1s)
+# !!! Values less than 5 may result from item cloning !!!
+time: 5
+
+# Message that displays after death with 'deathban.bypass' permissions
 message: "WoW! You survived this :O"
 
-# If you want bypass that command you need premission: deathban.bypassˑ

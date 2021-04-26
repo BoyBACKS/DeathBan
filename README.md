@@ -3,7 +3,7 @@
   Simple plugin that run custom command after player die, you can download plugin [here](#https://www.spigotmc.org/resources/deathban.91723/)
   
 # Permissions
-  `deathban.bypass` - permisja dająca ochronę przed działaniem komendy po śmierci
+  `deathban.bypass` - permission that gives protection against a command after death
   
 ## What have we added new?
 V1.5.3

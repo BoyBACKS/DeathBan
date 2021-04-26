@@ -1,6 +1,6 @@
 # DeathBan
 
-  Simple plugin that run custom command after player die, you can download plugin [here](#https://www.spigotmc.org/resources/deathban.91723/)
+  Simple plugin that run custom command after player die, you can download plugin ![here](#https://www.spigotmc.org/resources/deathban.91723/)
   
 # Permissions
   `deathban.bypass` - permission that gives protection against a command after death

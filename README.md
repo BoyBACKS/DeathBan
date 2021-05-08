@@ -2,10 +2,33 @@
 
   Simple plugin that run custom command after player die, you can download plugin [here](https://www.spigotmc.org/resources/deathban.91723/)
   
-# Permissions
-  `deathban.bypass` - permission that gives protection against a command after death
+#Commands
+  `/deathban [nick]` - That command shows your or other players deathscore
   
+  `/deathban reset [nick]` - That command reset your or other players deathscore
+
+  `/deathban toggle` - That command turn off/on custom event after death
+  
+  `/deathban help` - That command shows help page
+
+# Permissions
+  `deathban.bypass` - That permission gives you protection against custom event after death
+
+  `deathban.score/scoreother` - That permission gives you access to use `/deathban` command
+
+  `deathban.reset/resetother` - That permission gives you access to use `/deathban reset [nick]` command
+
+  `deathban.toggle` - That permission gives you access to use `/deathban toggle` command
+
+  `deathban.help` - That permission gives you access to use `/deathban help` command
+
 ## What have we added new?
+V1.6
+  * We added support for versions 1.8.x - 1.16.x 
+  * We added new permissions, and new commands
+  * We change **config.yml** adding new messages
+  * We added access to enable or disable custom event after death
+
 V1.5.3
   * We added the 'Time' function in the **config.yml** file, this function allows you to set your own     command execution time after death
 
@@ -45,7 +68,9 @@ V1.1
 
 ## What are we going to add?
 
-  * Ability to disable plugin 
   * MySQL support
   * Gui where you can manage the entire plugin
-  * We are going to add support for 1.8.x - 1.12.x
+  * Effects  after death 
+  * Player LootCrate after death
+  * ~~Ability to disable custom event~~
+  * ~~We are going to add support for 1.8.x - 1.12.x~~

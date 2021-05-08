@@ -1,24 +1,55 @@
 ##########################
-#        DeathBan        #ˑ
-#  created by BoyBACKS   #ˑ
+#        DeathBan        #
+#   created by BoyBACKS  #
 ##########################
 
-# This plugin is sooo easy to use!ˑ
-# You need only paste your command below!ˑ
+# This plugin is sooo easy to use!
+# You need only paste your command below!
 
-# Yeah thats rightˑ
-# paste command down belowˑ
+# Yeah thats right
+# paste command down below
 
-# ↓ Here paste it! ↓ˑ
+# ↓ Here paste it! ↓
 
-command: "ban {PLAYER}" # ← Soo replace it!ˑ
+command: "ban {PLAYER}" # ← Soo replace it!
 
-# ↑ JUST PASTE IT! ↑ˑ
+# ↑ JUST PASTE IT! ↑
 
 # Time counted in 'ticks' to execute the command (20 ticks = 1s)
-# !!! Values less than 5 may result from item cloning !!!
+# !!! Values less than 5 may result item cloning !!!
 time: 5
 
-# Message that displays after death with 'deathban.bypass' permissions
-message: "WoW! You survived this :O"
+# Change it to `false` if you want disable custom event after death, you can disable it using `/deathban toggle` command
+enable: true
 
+# All messages are listed here, they are not 100% grammatically correct ;>
+messages:
+
+  # Message that displays after death with 'deathban.bypass' permission
+  bypass_die: "&aWoW! You survived this :O"
+
+  # To use '/deathban' command you need 'deathban.score' permission
+  score: "&aYour Death Score is&l {SCORE}"
+
+  # To use '/deathban <nick>' command you need 'deathban.scoreother' permission
+  scoreother: "&a{PLAYER}'s Death Score is &l{SCORE}"
+
+  # To use '/deathban reset' command you need 'deathban.reset' permission
+  reset: "&aYour Death Score has been reset"
+
+  # To use '/deathban reset <nick>' command you need 'deathban.resetother' permission
+  resetother: "&aYou reset Death Score for the {PLAYER}"
+
+  # To use '/deathban toggle' command you need 'deathban.toggle' permission
+  enable: "&aYou &lenable &acustom event after death"
+  disable: "&aYou &c&ldisable &acustom event after death"
+
+  # To use '/deathban help' command you need 'deathban.help' permission
+  help: "&a&lCommand list:\n/deathban [nick] &a- show your death score \n&l/deathban reset [nick] &a- reset your/other players death score
+      \n&l/deathban help &a- show this page \n&l/deathban toggle &a- toggle custom event after death"
+
+  no_player: "&cPlayer &l{PLAYER} &cis offline"
+  no_permission: "&cHey! You don't have permission!"
+  console: "&cHey! Only player can use that command!"
+
+# Still need help? See my Github (https://github.com/BoyBACKS/DeathBan) or the plugin at spigot.org (https://www.spigotmc.org/resources/deathban.91723/)

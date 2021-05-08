@@ -1,8 +1,14 @@
 main: net.boybacks.deathban.DeathBan
 name: DeathBan
-version: 1.5.3
+version: 1.6
 author: BoyBACKS
 api-version: 1.13
 commands:
   deathban:
+    usage: /<command>
+  deathban reset:
+    usage: /<command>
+  deathban help:
+    usage: /<command>
+  deathban toggle:
     usage: /<command>

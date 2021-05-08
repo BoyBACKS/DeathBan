@@ -2,7 +2,7 @@
 
   Simple plugin that run custom command after player die, you can download plugin [here](https://www.spigotmc.org/resources/deathban.91723/)
   
-#Commands
+# Commands
   `/deathban [nick]` - That command shows your or other players deathscore
   
   `/deathban reset [nick]` - That command reset your or other players deathscore

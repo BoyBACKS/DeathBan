@@ -3,6 +3,9 @@
 #   created by BoyBACKS  #
 ##########################
 
+# !!! I'm using google translate software to translate messages and comments.
+
+
 # This plugin is sooo easy to use!
 # You need only paste your command below!
 
@@ -15,14 +18,33 @@ command: "ban {PLAYER}" # ← Soo replace it!
 
 # ↑ JUST PASTE IT! ↑
 
+
 # Time counted in 'ticks' to execute the command (20 ticks = 1s)
-# !!! Values less than 5 may result item cloning !!!
+# !!! Values less than 5 may result item cloning
 time: 5
 
-# Change it to `false` if you want disable custom event after death, you can disable it using `/deathban toggle` command
+
+# !!! For version 1.7 you can manage that options in gui  by using '/deathban' command
+# Change it to 'false' if you want disable custom event after death, you can disable it using '/deathban toggle' command
 enable: true
 
-# All messages are listed here, they are not 100% grammatically correct ;>
+
+# To use admin gui you need 'deathadmin.gui',
+gui:
+  # Change it to 'false' if you don't want gui. If set to 'True', the chat will not show the sample message
+  #  'score: '&aYour Death Score is&l {SCORE}' / scoreother: '&a{PLAYER}'s Death Score is &l{SCORE}''
+  enable: true
+
+  # Change it to 'false' if you don't want name tag in gui with player nickname
+  nickname: true
+
+  # Change it to 'false' if you don't want book in gui with player deathcout
+  deathcouter: true
+
+  # Change it to 'false' if you don't want compass in gui with player last death location
+  lastdeathlocation: true
+
+
 messages:
 
   # Message that displays after death with 'deathban.bypass' permission
@@ -51,5 +73,6 @@ messages:
   no_player: "&cPlayer &l{PLAYER} &cis offline"
   no_permission: "&cHey! You don't have permission!"
   console: "&cHey! Only player can use that command!"
-
+  noupdate: "&cHey! There is not a new update available."
+  update: "&cHey! There is a new update available. You can download it here https://www.spigotmc.org/resources/deathban.91723/" # Or down here ofc :D
 # Still need help? See my Github (https://github.com/BoyBACKS/DeathBan) or the plugin at spigot.org (https://www.spigotmc.org/resources/deathban.91723/)

@@ -1,4 +1,4 @@
-package net.boybacks.deathban;
+package net.boybacks.deathban.helpers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;

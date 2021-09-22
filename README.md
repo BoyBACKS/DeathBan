@@ -3,7 +3,7 @@
   Simple plugin that run custom command after player die, you can download plugin [here](https://www.spigotmc.org/resources/deathban.91723/)
   
 # Commands
-  `/deathban [nick]` - That command shows your or other players deathscore
+  `/deathban [nick]` - That command shows gui where can you see your last death stats/your or other players deathscore
   
   `/deathban reset [nick]` - That command reset your or other players deathscore
 
@@ -22,7 +22,14 @@
 
   `deathban.help` - That permission gives you access to use `/deathban help` command
 
+  `deathban.admin` - That permission gives you access to use admin gui `/deathban` 
+
 ## What have we added new?
+V1.7
+  * We added gui where can you manage entire plugin or see your death stats
+  * We added custom Update message
+  * We change java version form 8 to 11
+
 V1.6
   * We added support for versions 1.8.x - 1.16.x 
   * We added new permissions, and new commands
@@ -69,8 +76,12 @@ V1.1
 ## What are we going to add?
 
   * MySQL support
-  * Gui where you can manage the entire plugin
   * Effects  after death 
   * Player LootCrate after death
+  * Custom death titles
+  * Add 1.17+ version support
+  * ~~Gui where you can manage the entire plugin~~ For now we add gui but we want improve by adding full customization
+    * Custom title/slots/item names
+    * Transfer all commands to use in gui
   * ~~Ability to disable custom event~~
   * ~~We are going to add support for 1.8.x - 1.12.x~~
